@@ -23,7 +23,7 @@ function encodeTopicEntries() {
 }
 
 function defaultTopic() {
-    const list_string = getText("topics.txt");
+    let list_string = await getText("topics.txt");
     console.log(list_string);
     topics = encodeArray(list_string);
     console.log(topics);
