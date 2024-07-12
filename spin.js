@@ -11,9 +11,11 @@ async function getText(file) {
 }
 
 function encodeArray(longstring) {
-    console.log(longstring);
-    const new_array = longstring.split(/[\n\r]+/g);
-    return new_array;
+    if (typeof longstring == 'string') {
+        console.log(longstring);
+        const new_array = longstring.split(/[\n\r]+/g);
+        return new_array;
+    }
 }
 
 function encodeTopicEntries() {
