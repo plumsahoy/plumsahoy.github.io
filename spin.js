@@ -12,7 +12,6 @@ async function getText(file) {
 
 function encodeArray(longstring) {
     let new_array = longstring.split(/[\n\r]+/g);
-    console.log(new_array);
     return new_array;
 }
 
@@ -21,8 +20,10 @@ function encodeTopicEntries() {
 }
 
 async function defaultTopic() {
-    let topic_text = await getText("topics.txt");
-    topics = encodeArray(topic_text);
+    let list_string = await getText("topics.txt");
+    console.log(list_string);
+    topics = encodeArray(list_string);
+    console.log(topics);
     readyWheel();
 }
 
