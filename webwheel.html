@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box" id="list_select">
+    <p>topic selection mode</p> 
+    <div class="break"></div>
+    <div class="box" id="list_default">
+        <p><button type="button" onclick=defaultTopic()>plum's default topics</button></p> 
+    </div>
+    <div class="box" id="list_file">
+        <p><button type="button" onclick=fileTopic()>upload topic list</button></p> 
+    </div>
+    <div class="box" id="list_manual">
+        <p><button type="button" onclick=manualTopic()>manually enter topics</button></p> 
+    </div>
+</div>
+
+<div class="box" id="wheel">
+
+    <p><button disabled type="button" id="spin_button" onclick=spin()>Spin the Wheel!</button></p> 
+    <div class="break"></div>
+    <p id="wheel_result">Result: </p>
+
+</div>
+
+<script src="spin.js"> </script>
+
+</body>
+</html> 
