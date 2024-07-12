@@ -22,7 +22,7 @@ function encodeTopicEntries() {
 
 }
 
-function defaultTopic() {
+async function defaultTopic() {
     let list_string = await getText("topics.txt");
     console.log(list_string);
     topics = encodeArray(list_string);
@@ -38,11 +38,11 @@ function manualTopic() {
     readyWheel();
 }
 
-function readyWheel() {
+async function readyWheel() {
     s_button.disabled = false;
 }
 
-function spin() {
+async function spin() {
     const random = Math.floor(Math.random() * topics.length);
     result.innerHTML = "Result: " + topics[random];
 }
