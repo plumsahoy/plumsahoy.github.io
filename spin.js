@@ -11,7 +11,8 @@ async function getText(file) {
 }
 
 function encodeArray(longstring) {
-    let new_array = longstring.split(/[\n\r]+/g);
+    console.log(longstring);
+    const new_array = longstring.split(/[\n\r]+/g);
     return new_array;
 }
 
