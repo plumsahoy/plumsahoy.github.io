@@ -7,12 +7,11 @@ const result = document.getElementById("wheel_result");
 async function getText(file) {
     let topic_file = await fetch(file);
     let topic_text = await topic_file.text();
-    console.log(topic_text);
     return topic_text;
 }
 
 function encodeArray(longstring) {
-    let new_array = longstring.split((/(\r\n|\n|\r)/gm));
+    let new_array = longstring.split((/\r\n|\n|\r)/gm));
     console.log(new_array);
     return new_array;
 }
