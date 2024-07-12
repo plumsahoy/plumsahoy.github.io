@@ -23,6 +23,7 @@ function defaultTopic() {
     const list_string = getText("topics.txt");
     console.log(list_string);
     topics = encodeArray(list_string);
+    console.log(topics);
     readyWheel();
 }
 
