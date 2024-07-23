@@ -154,16 +154,16 @@ async function spin() {
     let selection = document.querySelector('input[name="topic_type"]:checked').value;
     if (selection == "DEF") {
         let sub_selection = document.querySelector('input[name="sub_topic_type"]:checked').value;
-        if (selection == "NON") {
+        if (sub_selection == "NON") {
             const random = Math.floor(Math.random() * ns_topics.length);
             result.innerHTML = "Result: " + ns_topics[random];
         }
-        if (selection == "SPE") {
+        if (sub_selection == "SPE") {
             
             const random = Math.floor(Math.random() * s_topics.length);
             result.innerHTML = "Result: " + s_topics[random];
         }
-        if (selection == "PER") {
+        if (sub_selection == "PER") {
             const random = Math.floor(Math.random() * pi_topics.length);
             result.innerHTML = "result: " + pi_topics[random];
         }
