@@ -66,11 +66,14 @@ function encodeArray(longstring) {
     }
 }
 
-async function defNSReveal() {
+function defaultReveal() {
     def_sub.style.display = "flex";
     fil_sub.style.display = "none";
     man_sub.style.display = "none";
     topic_sub.style.display = "flex";
+}
+
+async function defNSReveal() {
     display_text.innerHTML = ns_string;
     if (!Array.isArray(s_topics) || !s_topics.length) {
         unreadyWheel();
@@ -81,10 +84,6 @@ async function defNSReveal() {
 }
 
 async function defSReveal() {
-    def_sub.style.display = "flex";
-    fil_sub.style.display = "none";
-    man_sub.style.display = "none";
-    topic_sub.style.display = "flex";
     display_text.innerHTML = s_string;
     if (!Array.isArray(s_topics) || !s_topics.length) {
         unreadyWheel();
@@ -95,10 +94,6 @@ async function defSReveal() {
 }
 
 async function defPIReveal() {
-    def_sub.style.display = "flex";
-    fil_sub.style.display = "none";
-    man_sub.style.display = "none";
-    topic_sub.style.display = "flex";
     display_text.innerHTML = pi_string;
     if (!Array.isArray(pi_topics) || !pi_topics.length) {
         unreadyWheel();
