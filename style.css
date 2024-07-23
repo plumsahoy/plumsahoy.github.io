@@ -1,13 +1,19 @@
 * {
     box-sizing: border-box;
   }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 div {
     white-space: pre-wrap;
 }
 .wrap {
-    padding-top: clamp(60px, 50%, 100px);
+    padding-top: clamp(60px, 60px, 100px);
     padding-right: 16px;
-    padding-bottom: clamp(60px, 50%, 100px);
+    padding-bottom: clamp(60px, 60px, 100px);
     padding-left: 16px;
 }
 .box {
@@ -32,13 +38,13 @@ div {
 }
 
 @media (orientation: landscape) {
-    body {
-      flex-direction: row;
+    .box {
+        flex-direction: row;
     }
   }
 
 @media (orientation: portrait) {
-    body {
+    .box {
         flex-direction: column;
     }
   }
