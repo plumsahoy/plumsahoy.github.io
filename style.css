@@ -1,8 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
 div {
     white-space: pre-wrap;
 }
+.wrap {
+    padding-top: clamp(60px, 50%, 100px);
+    padding-right: 16px;
+    padding-bottom: clamp(60px, 50%, 100px);
+    padding-left: 16px;
+}
 .box {
     display: flex;
+    width: 100%;
+    max-width: 1280px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -19,3 +30,15 @@ div {
     flex-basis: 100%;
     height: 0;
 }
+
+@media (orientation: landscape) {
+    body {
+      flex-direction: row;
+    }
+  }
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+  }

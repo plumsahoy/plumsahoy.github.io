@@ -4,61 +4,66 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-
-<div class="box" id="list_select">
-    <p>plum's house of wheels</p> 
-    <div class="break"></div>
-
-    <input type="radio" id="default" name="topic_type" value="DEF" onclick=defaultReveal()>
-    <label for="default">plum's conversation starters</label>
-    <p>     </p>
-    <input type="radio" id="file" name="topic_type" value="FIL" onclick=fileReveal()>
-    <label for="file">upload item list</label>
-    <p>     </p>
-    <input type="radio" id="manual" name="topic_type" value="MAN" onclick=manualReveal()>
-    <label for="manual">manually enter items</label>
-    
-</div>
-
-<div class="box" id="type_selected">
-    <div class="sub" id="display_default">
-        <input type="radio" id="nonspecific" name="sub_topic_type" value="NON" onclick=defNSReveal()>
-        <label for="nonspecific">non-specific topics</label>
-        <p>     </p>
-        <input type="radio" id="specific" name="sub_topic_type" value="SPE" onclick=defSReveal()>
-        <label for="specific">specific topics</label>
-        <p>     </p>
-        <input type="radio" id="personal" name="sub_topic_type" value="PER" onclick=defPIReveal()>
-        <label for="personal">plum's personal interests</label>
-    </div>
-    <div class="sub" id="upload_file">
-        <form name="topic_form" onsubmit=fileReady()>
-            <input type="file" id="guest_file" accept=".txt" style="vertical-align:bottom;">
-            <input type="submit" value="submit topics" style="vertical-align:bottom;">
-        </form>
-    </div>
-    <div class="sub" id="enter_manual">
-        <form name="topic_form" onsubmit=manualReady()>
-            <p>separate each item using a comma</p>
-            <input type="text" id="guest_text" style="vertical-align:bottom;">
-            <input type="submit" value="submit topics" style="vertical-align:bottom;">
-        </form>
-    </div>
-    <div class="break"></div>
-    <div class="sub" id="display_pool">
-        <p>current items:</p>
+<section class="wrap">
+    <section class="box" id="list_select">
+        <p>plum's house of wheels</p> 
         <div class="break"></div>
-        <p id="topic_pool"></p>
-    </div>
-</div>
 
-<div class="box" id="wheel">
+        <input type="radio" id="default" name="topic_type" value="DEF" onclick=defaultReveal()>
+        <label for="default">plum's conversation starters</label>
+        <p>     </p>
+        <input type="radio" id="file" name="topic_type" value="FIL" onclick=fileReveal()>
+        <label for="file">upload item list</label>
+        <p>     </p>
+        <input type="radio" id="manual" name="topic_type" value="MAN" onclick=manualReveal()>
+        <label for="manual">manually enter items</label>
+        
+    </section>
+</section>
 
-    <p><button disabled type="button" id="spin_button" onclick=spin()>spin the wheel!</button></p> 
-    <div class="break"></div>
-    <p id="wheel_result">result: </p>
+<section class="wrap">
+    <section class="box" id="type_selected">
+        <div class="sub" id="display_default">
+            <input type="radio" id="nonspecific" name="sub_topic_type" value="NON" onclick=defNSReveal()>
+            <label for="nonspecific">non-specific topics</label>
+            <p>     </p>
+            <input type="radio" id="specific" name="sub_topic_type" value="SPE" onclick=defSReveal()>
+            <label for="specific">specific topics</label>
+            <p>     </p>
+            <input type="radio" id="personal" name="sub_topic_type" value="PER" onclick=defPIReveal()>
+            <label for="personal">plum's personal interests</label>
+        </div>
+        <div class="sub" id="upload_file">
+            <form name="topic_form" onsubmit=fileReady()>
+                <input type="file" id="guest_file" accept=".txt" style="vertical-align:bottom;">
+                <input type="submit" value="submit topics" style="vertical-align:bottom;">
+            </form>
+        </div>
+        <div class="sub" id="enter_manual">
+            <form name="topic_form" onsubmit=manualReady()>
+                <p>separate each item using a comma</p>
+                <input type="text" id="guest_text" style="vertical-align:bottom;">
+                <input type="submit" value="submit topics" style="vertical-align:bottom;">
+            </form>
+        </div>
+        <div class="break"></div>
+        <div class="sub" id="display_pool">
+            <p>current items:</p>
+            <div class="break"></div>
+            <p id="topic_pool"></p>
+        </div>
+    </section>
+</section>
 
-</div>
+<section class="wrap">
+    <section class="box" id="wheel">
+
+        <p><button disabled type="button" id="spin_button" onclick=spin()>spin the wheel!</button></p> 
+        <div class="break"></div>
+        <p id="wheel_result">result: </p>
+
+    </section>
+</section>
 
 <script src="spin.js" type="text/javascript"> </script>
 
