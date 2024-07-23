@@ -6,6 +6,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Courier New", sans-serif;
+    font-size: clamp(1rem, 1.2vw, 3rem);
 }
 div {
     white-space: pre-wrap;
@@ -23,14 +25,12 @@ div {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-family: "Courier New", sans-serif;
 }
 .sub {
     display: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-family: "Courier New", sans-serif;
 }
 .break {
     flex-basis: 100%;
