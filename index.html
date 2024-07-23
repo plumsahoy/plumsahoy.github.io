@@ -25,18 +25,12 @@
 <section class="wrap">
     <section class="box" id="type_selected">
         <div class="sub" id="display_default">
-            <div class="sub">
-                <input type="radio" id="nonspecific" name="sub_topic_type" value="NON" onclick=defNSReveal()>
-                <label for="nonspecific">non-specific topics</label>
-            </div>
-            <div class="sub">
-                <input type="radio" id="specific" name="sub_topic_type" value="SPE" onclick=defSReveal()>
-                <label for="specific">specific topics</label>
-            </div>
-            <div class="sub">
-                <input type="radio" id="personal" name="sub_topic_type" value="PER" onclick=defPIReveal()>
-                <label for="personal">plum's personal interests</label>
-            </div>
+            <input type="radio" id="nonspecific" name="sub_topic_type" value="NON" onclick=defNSReveal()>
+            <label for="nonspecific">non-specific topics</label>
+            <input type="radio" id="specific" name="sub_topic_type" value="SPE" onclick=defSReveal()>
+            <label for="specific">specific topics</label>
+            <input type="radio" id="personal" name="sub_topic_type" value="PER" onclick=defPIReveal()>
+            <label for="personal">plum's personal interests</label>
         </div>
         <div class="sub" id="upload_file">
             <form name="topic_form" onsubmit=fileReady()>

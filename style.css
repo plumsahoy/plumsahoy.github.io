@@ -7,7 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Courier New", sans-serif;
-    font-size: clamp(1rem, 1.2vw, 10rem);
 }
 div {
     white-space: pre-wrap;
@@ -38,12 +37,18 @@ div {
 }
 
 @media (orientation: landscape) {
+    body {
+        font-size: clamp(1rem, 1.2vw, 10rem);
+    }
     .box {
         flex-direction: row;
     }
   }
 
 @media (orientation: portrait) {
+    body {
+        font-size: clamp(1rem, 1.2vw, 10rem);
+    }
     .box {
         flex-direction: column;
     }
