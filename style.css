@@ -11,11 +11,15 @@ body {
 div {
     white-space: pre-wrap;
 }
-.wrap {
+.section_wrap {
     padding-top: clamp(60px, 60px, 100px);
     padding-right: 16px;
     padding-bottom: clamp(60px, 60px, 100px);
     padding-left: 16px;
+}
+.label_wrap {
+    display: flex;
+    flex-direction: row;
 }
 .box {
     display: flex;
@@ -47,7 +51,7 @@ div {
 
 @media (orientation: portrait) {
     body {
-        font-size: clamp(1rem, 5vw, 10rem);
+        font-size: clamp(1rem, 4.8vw, 10rem);
     }
     .box {
         flex-direction: column;
