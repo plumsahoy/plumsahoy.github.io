@@ -1,8 +1,12 @@
 var topics = [];
 var topics_string = "";
 
-var default_topics = [];
-var default_string = "";
+var ns_topics = [];
+var ns_string = "";
+var s_topics = [];
+var s_string = "";
+var pi_topics = [];
+var pi_string = "";
 
 var file_topics = [];
 var file_string = "";
@@ -33,9 +37,15 @@ for (i = 0; i < upload_forms.length; i++) {
 }
 
 async function loadDefault() {
-    let list_string = await getText("default_topics.txt");
-    default_string = list_string;
-    default_topics = encodeArray(default_string);
+    let ns_list = await getText("plum_ns.txt");
+    let s_list = await getText("plum_s.txt");
+    let pi_list = await getText("plum_pi.txt");
+    ns_string = ns_list;
+    s_string = s_list;
+    pi_string = pi_list;
+    ns_topics = encodeArray(ns_string);
+    s_topics = encodeArray(s_string);
+    pi_topics = encodeArray(pi_string);
 }
 
 async function getTextLocalTest() {
@@ -56,13 +66,41 @@ function encodeArray(longstring) {
     }
 }
 
-async function defaultReveal() {
+async function defNSReveal() {
     def_sub.style.display = "flex";
     fil_sub.style.display = "none";
     man_sub.style.display = "none";
     topic_sub.style.display = "flex";
-    display_text.innerHTML = default_string;
-    if (!Array.isArray(default_topics) || !default_topics.length) {
+    display_text.innerHTML = ns_string;
+    if (!Array.isArray(s_topics) || !s_topics.length) {
+        unreadyWheel();
+    }
+    else {
+        readyWheel();
+    }
+}
+
+async function defSReveal() {
+    def_sub.style.display = "flex";
+    fil_sub.style.display = "none";
+    man_sub.style.display = "none";
+    topic_sub.style.display = "flex";
+    display_text.innerHTML = s_string;
+    if (!Array.isArray(s_topics) || !s_topics.length) {
+        unreadyWheel();
+    }
+    else {
+        readyWheel();
+    }
+}
+
+async function defPIReveal() {
+    def_sub.style.display = "flex";
+    fil_sub.style.display = "none";
+    man_sub.style.display = "none";
+    topic_sub.style.display = "flex";
+    display_text.innerHTML = pi_string;
+    if (!Array.isArray(pi_topics) || !pi_topics.length) {
         unreadyWheel();
     }
     else {
@@ -120,8 +158,20 @@ async function readyWheel() {
 async function spin() {
     let selection = document.querySelector('input[name="topic_type"]:checked').value;
     if (selection == "DEF") {
-        const random = Math.floor(Math.random() * default_topics.length);
-        result.innerHTML = "Result: " + default_topics[random];
+        let sub_selection = document.querySelector('input[name="sub_topic_type"]:checked').value;
+        if (selection == "NON") {
+            const random = Math.floor(Math.random() * ns_topics.length);
+            result.innerHTML = "Result: " + ns_topics[random];
+        }
+        if (selection == "SPE") {
+            
+            const random = Math.floor(Math.random() * s_topics.length);
+            result.innerHTML = "Result: " + s_topics[random];
+        }
+        if (selection == "PER") {
+            const random = Math.floor(Math.random() * pi_topics.length);
+            result.innerHTML = "result: " + pi_topics[random];
+        }
     }
     if (selection == "FIL") {
         
