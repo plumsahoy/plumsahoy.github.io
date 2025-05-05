@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;section class="section_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="box" id="list_select"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;plum's house of wheels&lt;/p&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="break"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="default" name="topic_type" value="DEF" onclick=defaultReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="default"&gt;plum's conversation starters&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="file" name="topic_type" value="FIL" onclick=fileReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="file"&gt;upload item list&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="manual" name="topic_type" value="MAN" onclick=manualReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="manual"&gt;manually enter items&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="section_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="box" id="type_selected"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub" id="display_default"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="nonspecific" name="sub_topic_type" value="NON" onclick=defNSReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="nonspecific"&gt;non-specific topics&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="specific" name="sub_topic_type" value="SPE" onclick=defSReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="specific"&gt;specific topics&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="label_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="personal" name="sub_topic_type" value="PER" onclick=defPIReveal()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="personal"&gt;plum's personal interests&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub" id="upload_file"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form name="topic_form" onsubmit=fileReady()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="file" id="guest_file" accept=".txt" style="vertical-align:bottom;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="submit" value="submit topics" style="vertical-align:bottom;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub" id="enter_manual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form name="topic_form" onsubmit=manualReady()&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;separate each item using a comma&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="guest_text" style="vertical-align:bottom;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="submit" value="submit topics" style="vertical-align:bottom;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="break"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub" id="display_pool"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;current items:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="break"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="topic_pool"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="section_wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="box" id="wheel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;button disabled type="button" id="spin_button" onclick=spin()&gt;spin the wheel!&lt;/button&gt;&lt;/p&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="break"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="wheel_result"&gt;result: &lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script src="spin.js" type="text/javascript"&gt; &lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;<span class="Apple-converted-space"> </span></p>
+</body>
+</html>
